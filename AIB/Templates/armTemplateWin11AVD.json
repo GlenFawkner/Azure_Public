@@ -67,7 +67,7 @@
                         "name": "OptimizeOS",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/GlenFawkner/Azure_Public/main/AIB/Installs/Optimize_OS_for_AVD.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/GlenFawkner/Azure_Public/main/AIB/Installs/configureOptimisations.ps1"
                     },
                     {
                         "type": "WindowsRestart",
