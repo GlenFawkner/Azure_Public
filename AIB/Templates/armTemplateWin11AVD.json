@@ -60,7 +60,7 @@
                         "name": "installFsLogix",
                         "runElevated": true,
                         "runAsSystem": true,
-                        "scriptUri": "https://raw.githubusercontent.com/GlenFawkner/Azure_Public/main/AIB/Installs/installConfFsLogix.ps1"
+                        "scriptUri": "https://raw.githubusercontent.com/azure/azvmimagebuilder/main/solutions/14_Building_Images_WVD/0_installConfFsLogix.ps1"
                     },
                     {
                         "type": "PowerShell",
