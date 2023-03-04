@@ -52,6 +52,44 @@
                     "sku": "win11-22h2-avd",
                     "version": "latest"
             },
+            "customize": [
+
+        
+                {
+                    "type": "PowerShell",
+                    "name": "installFsLogix",
+                    "runElevated": true,
+                    "runAsSystem": true,
+                    "scriptUri": "https://raw.githubusercontent.com/GlenFawkner/Azure_Public/main/AIB/Installs/installConfFsLogix.ps1"
+                },
+                {
+                    "type": "WindowsRestart",
+                    "restartCheckCommand": "write-host 'restarting post Optimizations'",
+                    "restartTimeout": "5m"
+                },
+                {
+                    "type": "PowerShell",
+                    "name": "Install Teams",
+                    "runElevated": true,
+                    "runAsSystem": true,
+                    "scriptUri": "https://raw.githubusercontent.com/GlenFawkner/Azure_Public/main/AIB/Installs/installTeams.ps1"
+                },
+                {
+                    "type": "WindowsRestart",
+                    "restartCheckCommand": "write-host 'restarting post Teams Install'",
+                    "restartTimeout": "5m"
+                },
+                {
+                    "type": "WindowsUpdate",
+                    "searchCriteria": "IsInstalled=0",
+                    "filters": [
+                        "exclude:$_.Title -like '*Preview*'",
+                        "include:$true"
+                                ],
+                    "updateLimit": 40
+                }
+
+        ],
             "distribute": 
             [
                 {   
