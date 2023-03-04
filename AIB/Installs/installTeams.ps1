@@ -36,6 +36,6 @@
  $teamsMsi = 'teams.msi'
  $outputPath = $LocalPath + '\' + $teamsMsi
  Invoke-WebRequest -Uri $teamsURL -OutFile $outputPath
- Start-Process -FilePath msiexec.exe -Args "/I $outputPath /quiet /norestart /log teams.log ALLUSER=1 ALLUSERS=1" -Wait
+ Start-Process -FilePath msiexec.exe -Args "/I $outputPath /quiet /norestart /log teams.log OPTIONS="noAutoStart=true" ALLUSER=1 ALLUSERS=1" -Wait
  write-host 'AIB Customization: Finished Install MS Teams' 
  
